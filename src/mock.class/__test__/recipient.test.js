@@ -1,4 +1,4 @@
-import Recipient from "../Recipient";
+import Recipient from "../recipient";
 
 describe("acceptInjection", () => {
   beforeEach(() => {
@@ -14,7 +14,6 @@ describe("acceptInjection", () => {
         };
       });
     });
-
     const Covid19Vaccine = require("../covid19Vaccine");
 
     const recipient = new Recipient();

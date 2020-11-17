@@ -1,5 +1,14 @@
+import axios from "axios";
+import getUser from "../users";
+
+jest.mock("axios");
 describe("users", () => {
-  test("should get users data with mock axios get", () => {
-    // TODO 13: add async test with manual mock
+  test("should get users data with mock axios get", async () => {
+    axios.get.mockResolvedValue({
+      data: {
+        name: "yanqin",
+      },
+    });
+    await expect(getUser()).resolves.toEqual({ name: "yanqin" });
   });
 });
